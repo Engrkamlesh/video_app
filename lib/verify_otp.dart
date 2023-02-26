@@ -1,6 +1,7 @@
+// ignore_for_file: camel_case_types, non_constant_identifier_names
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'custombuttom.dart';
 import 'utils.dart';
 import 'view_video.dart';
@@ -26,7 +27,6 @@ final verifyController = TextEditingController();
         .size
         .height * 0.8;
     return Scaffold(
-    
         body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: SingleChildScrollView(
@@ -38,12 +38,15 @@ final verifyController = TextEditingController();
                     children: [
                   SizedBox(height: _height * 0.2),
                   const Text(
-                      "Verfy Your OTP Code",
+                      "Verify Your OTP Code",
                       style:TextStyle(
                           color: Colors.indigo,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                       ),
+                      
+                  SizedBox(height: _height * 0.8),
+                  const Text('Please check your inbox, we will send you OTP code on your Mobile Number'),
                   SizedBox(height: _height * 0.14),
                   const Text('OTP Code', style:TextStyle(
                         fontSize: 15, fontWeight: FontWeight.w600),),
@@ -70,10 +73,9 @@ final verifyController = TextEditingController();
                              final credential = PhoneAuthProvider.credential
                         (verificationId: widget.Verificationid,
                          smsCode: verifyController.text.toString());
-
                          try {
                            _auth.signInWithCredential(credential);
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>View_Video_list()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>const View_Video_list()));
                          } catch (e) {
                           setState(() {
                             loading = false;
@@ -81,7 +83,6 @@ final verifyController = TextEditingController();
                            Utils().ToastMassage(e.toString());
                          }
                         }
-                     
                       },loading: loading,)
                 ])
             )

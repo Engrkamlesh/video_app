@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'login_mobile.dart';
+import 'package:video_app/login_mobile.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();

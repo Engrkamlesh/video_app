@@ -45,6 +45,10 @@ dependencies:
   fluttertoast:
   uuid: ^3.0.7
   velocity_x: ^3.6.0
+  video_player: ^2.5.2
+  chewie: ^1.4.0
+  
+
 
 dev_dependencies:
   flutter_test:
