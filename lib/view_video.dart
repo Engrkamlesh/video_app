@@ -43,7 +43,7 @@ class _View_Video_listState extends State<View_Video_list> {
                           Container(
                             width: double.infinity,
                             // height: 250,
-                            color: Colors.deepOrange,
+                            // color: Colors.deepOrange,
                             child: chewie_video_Play(url: snapshot.child('link').value.toString(),),
                           ),
                           snapshot

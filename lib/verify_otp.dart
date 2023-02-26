@@ -45,7 +45,7 @@ final verifyController = TextEditingController();
                           fontWeight: FontWeight.bold),
                       ),
                       
-                  SizedBox(height: _height * 0.8),
+                  SizedBox(height: _height * 0.08),
                   const Text('Please check your inbox, we will send you OTP code on your Mobile Number'),
                   SizedBox(height: _height * 0.14),
                   const Text('OTP Code', style:TextStyle(
